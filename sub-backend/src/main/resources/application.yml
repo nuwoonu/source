@@ -1,0 +1,24 @@
+spring:
+  aplication:
+    name: sub_backend
+  datasource:
+    url: jdbc:mysql://localhost:3306/sub_project
+    username: sub_project
+    password: 1234
+    #driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # create / update / validate / none
+    show-sql: true
+    properties:
+      hibernate:
+        "[format_sql]": true
+server:
+  port: 8080
+
+logging:
+  level:
+    sub_project: INFO
+    com.soldesk: DEBUG
+    org.hibernate.SQL: DEBUG
+    org.hibernate.orm.jdbc.bind: trace
